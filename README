@@ -10,7 +10,12 @@ SYNOPSIS
                   PREFETCH     => '*.tt',
                   INCLUDE_PATH => 'my/templates',
                   COMPILE_DIR  => 'my/cache',
-              ); 
+  
+                  # Parser options should go here instead of to the
+                  # parent Template constructor.
+                  INTERPOLATE  => 1,
+                  PRE_CHOMP    => 1,
+              );
           ],
       );
 
